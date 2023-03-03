@@ -45,11 +45,11 @@ export default function Home() {
           <input
             type="text"
             name="animal"
-            placeholder="Enter an animal"
+            placeholder="Enter a word"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Generate names" />
+          <input type="submit" value="Generate mnemonic" />
         </form>
         <div className={styles.result}>{result}</div>
       </main>
