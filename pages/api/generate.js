@@ -49,14 +49,22 @@ export default async function (req, res) {
 }
 
 function generatePrompt(animal) {
-  const capitalizedAnimal =
+  const vocabularyWord =
     animal[0].toUpperCase() + animal.slice(1).toLowerCase();
-  return `Suggest three names for an animal that is a superhero.
+  return `Suggest a textual mnemonic device in English for the Korean word. 
 
-Animal: Cat
-Names: Captain Sharpclaw, Agent Fluffball, The Incredible Feline
-Animal: Dog
-Names: Ruff the Protector, Wonder Canine, Sir Barks-a-Lot
-Animal: ${capitalizedAnimal}
-Names:`;
+Korean: 노래하다
+Mnemonic: **No, Ray** can _sing_ very well actually 
+Korean: 예쁘다
+Mnemonic: **Yep** I'm _pretty_.
+Korean: 것
+Mnemonic: I just **got** this _thing_.	
+Korean: 집
+Mnemonic: A **Jeep** parked out in front of your _house_ is a must.
+Korean: 마시다
+Mnemonic: Get something out of the _drink_ **machi**ne.	
+Korean: 하다
+Mnemonic: **Ha**! I _did_ it!
+Korean: ${vocabularyWord}
+Mnemonic:`;
 }
